@@ -1,0 +1,40 @@
+body{
+    background-image: url('new.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h1{
+    text-align: center;
+    color: rgb(202, 2, 2);
+    padding-top: 150px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+button{
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    margin: 50px;
+    height: 40px;
+    width: 75px;
+    font-family: roboto;
+    font-size: larger;
+}
+div{
+    display: flex;
+    justify-content: center;
+}
+#yes{
+    position:sticky;
+}
+#no {
+
+    transition: all 0.3s ease;
+}
+
+#no:hover {
+    transform: translate(
+        calc(random() * (100vw - 100%)),
+        calc(random() * (100vh - 100%))
+    );
+}

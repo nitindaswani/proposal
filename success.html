@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay! She said YES!</title>
+    <link rel="stylesheet" href="success.css">
+</head>
+<body class="success-page">
+    <div class="floating-hearts" id="heartsContainer"></div>
+    <h1>YAYYY!! I LOVE YOU TOO! ❤️</h1>
+</body>
+
+<script>
+    function createHearts() {
+        const container = document.getElementById('heartsContainer');
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤️';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        container.appendChild(heart);
+        
+        // Remove heart after animation
+        setTimeout(() => {
+            heart.remove();
+        }, 4000);
+    }
+
+    // Create hearts every 300ms
+    setInterval(createHearts, 300);
+</script>
+</html>
